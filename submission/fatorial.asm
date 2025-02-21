@@ -9,7 +9,8 @@ COMECO JZ FIM
 FIM HM /000
 
 @ /0200
-VERIFICAR JZ FIMROT
+VERIFICAR JP /000
+          JZ FIMROT
           ML RES
           MM RES
           LD N
