@@ -1,24 +1,23 @@
-LD N        # Carrega N
-JZ FIM      # Se N == 0, termina o programa
+LD N
+SC /200
+JZ /00C
+JP /006
+HM /000
 
-LD UM       # Carrega a constante 1
-MM RES      # Inicializa RES = 1
+@ /0200
+JP /000
+JZ /20E
+ML RES
+MM RES
+LD N
+SB UM
+MM N
+RS /200
 
-@LOOP
-LD N        # Carrega N
-JZ FIM      # Se N == 0, termina o loop
-ML RES      # Multiplica RES por N
-MM RES      # Armazena o novo RES
 
-LD N        # Carrega N
-SB UM       # Subtrai 1
-MM N        # Atualiza N
-JP LOOP     # Repete enquanto N > 0
+@ /0102
+RES K/1
 
-@FIM
-HM /000     # Finaliza o programa
+@ /0220
+UM K/0001
 
-@DADOS
-N   K/5     # Número para calcular fatorial (exemplo: 5)
-RES K/1     # Inicializa RES = 1
-UM  K/1     # Constante 1
