@@ -1,27 +1,18 @@
-LD N
-JZ FIM
-LOOP   JP VERIFICAR
-COMECO JZ FIM
-       JP LOOP
+LV /001
+MM /102
+LD /100
+SC /200
+JP /006
+HM /000
 
-
-@/230
-FIM HM /000
-
-@ /0200
-VERIFICAR JP /000
-          JZ FIMROT
-          ML RES
-          MM RES
-          LD N
-          SB UM
-          MM N
-FIMROT    JP COMECO
-
-
-@ /0102
-RES K/0001
+@ /0202
+JZ /20E
+ML /102
+MM /102
+LD /100
+SB /220
+MM /100
+RS /200
 
 @ /0220
-UM K/0001
-
+K /0001
