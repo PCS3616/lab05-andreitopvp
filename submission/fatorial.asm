@@ -10,11 +10,14 @@ JZ /20E
 ML RES
 MM RES
 LD N
-SB /220
+SB UM
 MM N
 RS /200
 
 
 @ /102
 RES K/1
+
+@ /220
+UM K/1
 
